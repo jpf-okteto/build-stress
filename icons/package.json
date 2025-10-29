@@ -1,0 +1,20 @@
+{
+  "name": "web-stress",
+  "version": "1.0.0",
+  "description": "Stress test for container build with many small files",
+  "scripts": {
+    "build": "mkdir -p dist && cp -r src/* dist/",
+    "start": "npx http-server dist -p 80"
+  },
+  "dependencies": {
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "bootstrap-icons": "^1.11.3",
+    "font-awesome": "^4.7.0",
+    "material-design-icons": "^3.0.1",
+    "simple-icons": "^13.12.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
