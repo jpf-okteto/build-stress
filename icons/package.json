@@ -1,9 +1,8 @@
 {
   "name": "web-stress",
   "version": "1.0.0",
-  "description": "Stress test for container build with many small files",
   "scripts": {
-    "build": "mkdir -p dist && cp -r src/* dist/",
+    "build": "mkdir -p dist && webpack --entry ./src/index.js --output-path ./dist",
     "start": "npx http-server dist -p 80"
   },
   "dependencies": {
@@ -15,6 +14,8 @@
     "simple-icons": "^13.12.0"
   },
   "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
     "http-server": "^14.1.1"
   }
 }
