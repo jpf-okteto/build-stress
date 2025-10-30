@@ -1,0 +1,6 @@
+dev:
+  workspace:
+    autocreate: true
+    command: bash
+    image: node:20
+

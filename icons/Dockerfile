@@ -1,10 +1,7 @@
-FROM node:22-alpine
+FROM node:20
 
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY src ./src
-RUN npm run build
+RUN yarn install
 
-EXPOSE 80
-CMD ["npx", "http-server", "dist", "-p", "80"]
+RUN NODE_OPTIONS="--max-old-space-size=8192" yarn build
+
+CMD [tail, -f, /dev/null]
